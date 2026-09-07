@@ -1,0 +1,249 @@
+body {
+  margin: 0px;
+  background: #c0c0c0;
+  color: #000000;
+  font-family: "PMingLiU", "MingLiU", "新細明體", serif;
+  font-size: 12pt;
+}
+
+td {
+  font-family: "PMingLiU", "MingLiU", "新細明體", serif;
+  font-size: 12pt;
+}
+
+a {
+  color: #0000ee;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+.page {
+  width: 800px;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+
+.top {
+  background: #006633;
+  color: #ffffcc;
+}
+
+.school-name {
+  font-size: 28pt;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.home-school-name {
+  width: 470px;
+  height: 52px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background: #006633 url("images/school_name.gif") no-repeat left top;
+}
+
+.school-en {
+  color: #ffffff;
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.top-link {
+  background: #ffffff;
+  color: #000080;
+  font-size: 10pt;
+}
+
+.header-gif {
+  background: #ffffff;
+  text-align: center;
+  padding: 2px;
+}
+
+.ticker-title {
+  background: #dedede;
+  color: #000000;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.ticker {
+  background: #ffff00;
+  color: #000080;
+  font-size: 10pt;
+}
+
+.left {
+  background: #006633;
+  color: #ffffff;
+}
+
+.left a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu-head {
+  background: #000080;
+  color: #ffffff;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.menu-cell {
+  background: #e8fff0;
+  color: #000000;
+  border-bottom: 1px solid #006633;
+}
+
+.menu-cell a {
+  color: #000080;
+  text-decoration: underline;
+}
+
+.content {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px;
+}
+
+.right {
+  background: #f3f3f3;
+  color: #000000;
+}
+
+.box-title {
+  background: #000080;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.small {
+  font-size: 10pt;
+}
+
+.tiny {
+  font-size: 9pt;
+}
+
+.red {
+  color: #cc0000;
+}
+
+.blue {
+  color: #000080;
+}
+
+.gray {
+  color: #666666;
+}
+
+.news-table {
+  border-collapse: collapse;
+}
+
+.news-table td {
+  border-bottom: 1px dotted #999999;
+  padding: 4px;
+}
+
+.form-button {
+  background: #dcdcdc;
+  color: #000000;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #666666;
+  border-bottom: 2px solid #666666;
+  padding: 2px 8px;
+}
+
+.photo {
+  border: 1px solid #666666;
+  background: #eeeeee;
+  padding: 3px;
+}
+
+.caption {
+  font-size: 10pt;
+  color: #333333;
+}
+
+.stamp {
+  border: 2px solid #cc0000;
+  color: #cc0000;
+  font-size: 18pt;
+  font-weight: bold;
+  width: 92px;
+  text-align: center;
+  filter: alpha(opacity=75);
+}
+
+.error {
+  border: 1px solid #999999;
+  background: #f7f7f7;
+  padding: 10px;
+}
+
+.mono {
+  font-family: "Courier New", monospace;
+  font-size: 10pt;
+}
+
+.hide-line {
+  color: #ffffff;
+  font-size: 1px;
+}
+
+.footer {
+  background: #eeeeee;
+  color: #333333;
+  font-size: 10pt;
+}
+
+.counter td {
+  background: #000000;
+  color: #ffff00;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  border: 1px solid #808080;
+  padding: 1px 3px;
+}
+
+.notice-paper {
+  background: #fffff4;
+  border: 1px solid #999999;
+  padding: 12px;
+}
+
+.source-note {
+  color: #ffffff;
+  font-size: 1pt;
+}
+
+.source-link,
+a.source-link:visited {
+  background: transparent;
+  border: 0px;
+  color: #999999;
+  font-size: 7pt;
+  padding: 0px;
+  text-decoration: none;
+}
+
+a.source-link:hover {
+  color: #666666;
+}
+
+.broken-name {
+  color: #666666;
+  font-family: "Courier New", monospace;
+  font-size: 9pt;
+}
+
+.raw-table td {
+  font-family: "Courier New", monospace;
+  font-size: 9pt;
+}

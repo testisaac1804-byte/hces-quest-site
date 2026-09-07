@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>《溪埕國民小學失蹤事件》</title>
+    <meta name="application-name" content="解謎任務工作室 Solve.quest Studio">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/home/assets/solvequest-studio-icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/home/assets/solvequest-studio-icon-192.png">
+    <link rel="apple-touch-icon" href="/home/assets/solvequest-studio-icon-180.png">
+    <link rel="stylesheet" href="styles.css?v=64">
+    <script src="book-data.js?v=2" defer></script>
+    <script src="reader.js?v=66" defer></script>
+  </head>
+  <body>
+    <div class="reader-shell">
+      <aside class="library" id="library" aria-label="章節目錄">
+        <button id="tocClose" class="toc-close" type="button" aria-label="收起目錄">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M15 6 L9 12 L15 18"></path>
+          </svg>
+        </button>
+        <div class="library-head">
+          <p>Truth Archive</p>
+          <h1>溪埕國民小學失蹤事件</h1>
+          <span id="chapterCount"></span>
+        </div>
+
+        <label for="chapterSearch">章節搜尋</label>
+        <input id="chapterSearch" type="search" autocomplete="off" placeholder="輸入章節或關鍵字">
+
+        <ol class="toc" id="toc"></ol>
+        <p class="library-signature">© 解謎任務工作室 Solve.quest Studio</p>
+      </aside>
+
+      <div id="tocBackdrop" class="toc-backdrop" aria-hidden="true"></div>
+
+      <main class="reader">
+        <div class="reader-header">
+          <div class="desktop-book-title">《溪埕國民小學失蹤事件》</div>
+          <header class="topbar">
+            <div class="topbar-left">
+              <button id="tocToggle" type="button" aria-controls="library" aria-expanded="false">目錄</button>
+              <span class="topbar-book-title">《溪埕國民小學失蹤事件》</span>
+              <a href="../../index.html">回首頁</a>
+            </div>
+
+            <div class="status">
+              <span class="font-settings">
+                <span class="custom-select font-select" data-custom-select>
+                  <select id="fontFamilySelect" aria-label="閱讀字體">
+                    <option value="sans">黑體</option>
+                    <option value="pmingliu">新細明體</option>
+                  </select>
+                </span>
+                <span class="padding-buttons">
+                  <button id="paddingDown" class="reader-step" type="button" aria-label="減少閱讀內距">P-</button>
+                  <button id="paddingUp" class="reader-step" type="button" aria-label="增加閱讀內距">P+</button>
+                </span>
+              </span>
+              <span id="styleButtons" class="style-buttons">
+                <button id="fontWeightDown" class="reader-step" type="button">W-</button>
+                <button id="fontWeightUp" class="reader-step" type="button">W+</button>
+                <button id="textAlphaDown" class="reader-step" type="button" aria-label="降低文字透明度">α-</button>
+                <button id="textAlphaUp" class="reader-step" type="button" aria-label="提高文字透明度">α+</button>
+              </span>
+            </div>
+
+            <div class="controls" aria-label="閱讀設定">
+              <span class="reader-step-group">
+                <button id="fontDown" class="reader-step" type="button">A-</button>
+                <button id="fontUp" class="reader-step" type="button">A+</button>
+                <button id="lineHeightDown" class="reader-step" type="button">H-</button>
+                <button id="lineHeightUp" class="reader-step" type="button">H+</button>
+              </span>
+              <button id="sliderToggle" class="icon-toggle" type="button" aria-pressed="true" aria-label="切換 slider">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M6 8.5 L12 15.5 L18 8.5"></path>
+                </svg>
+              </button>
+              <span class="reader-select-group">
+                <span class="custom-select reading-select" data-custom-select>
+                  <select id="readingModeSelect" aria-label="閱讀方式">
+                    <option value="continuous">連續閱讀</option>
+                    <option value="single">單章閱讀</option>
+                  </select>
+                </span>
+                <span class="custom-select theme-select" data-custom-select>
+                  <select id="themeSelect" aria-label="閱讀主題">
+                    <option value="paper">紙本</option>
+                    <option value="mist">霧面</option>
+                    <option value="night">夜讀</option>
+                  </select>
+                </span>
+              </span>
+            </div>
+          </header>
+
+          <div class="book-position">
+            <span id="currentChapter" class="book-position-label"></span>
+            <input id="bookSlider" type="range" min="0" max="1000" step="1" value="0" aria-label="整本書位置">
+            <span id="bookPercent" class="book-position-percent">0%</span>
+          </div>
+          </div>
+
+          <div id="readerLoading" class="reader-loading" role="status" aria-live="polite" aria-hidden="true">
+            <span class="reader-loading-spinner" aria-hidden="true"></span>
+          </div>
+
+          <article class="book-content" id="bookContent"></article>
+
+        <nav class="chapter-actions" aria-label="章節切換">
+          <button id="prevChapter" type="button">上一章</button>
+          <button id="nextChapter" type="button">下一章</button>
+        </nav>
+        <p class="reader-signature">© 解謎任務工作室 Solve.quest Studio</p>
+      </main>
+    </div>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"3d854dbb3c79447c90b5d4a90a63251f","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
