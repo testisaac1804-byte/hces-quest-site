@@ -5,8 +5,30 @@
 <script type="text/javascript" src="./imgload.js"></script>
 <script type="text/javascript" src="./site.js"></script>
 <link rel="stylesheet" href="./css2"></head>
-<body class="class-page" bgcolor="#cceeff">
+<body class="class-page" bgcolor="#cceeff"><div id="classweb-gate"><center><div style="background:#ffffff;border:1px solid #cccccc;width:320px;margin:60px auto;padding:18px;text-align:left;">
+<h3 style="margin-top:0;">六年乙班班級網頁登入</h3>
+<p>請輸入帳號及密碼。</p>
+<form method="post" action="" onsubmit="return sqLogin(this);">帳號：<input type="text" name="username" size="14" autocomplete="username"><br><br>密碼：<input type="password" name="password" size="14" autocomplete="current-password"> <input type="submit" value="登入"></form>
+<p id="sqerr" style="display:none;color:#cc0000;">帳號或密碼錯誤。</p>
+</div></center></div><div id="classweb-real" style="display:none;">
 <script type="text/javascript">writeClassPageStart("生活札記", "top");</script>
 <script type="text/javascript">renderLifeWorksMonthNav();</script><script type="text/javascript">renderLifeWorksList();</script>
 <script type="text/javascript">writeClassPageEnd();</script>
-</body></html>
+</div>
+<script type="text/javascript">
+function sqLogin(form) {
+  var u = (form.username ? form.username.value : "").trim();
+  var p = form.password ? form.password.value : "";
+  var err = document.getElementById("sqerr");
+  if (err) err.style.display = "none";
+  if ((u === "6b" || u === "6B") && p === "happyland92") {
+    var gate = document.getElementById("classweb-gate");
+    var real = document.getElementById("classweb-real");
+    if (gate) gate.style.display = "none";
+    if (real) real.style.display = "block";
+  } else {
+    if (err) err.style.display = "block";
+  }
+  return false;
+}
+</script></body></html>

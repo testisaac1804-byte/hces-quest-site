@@ -6,7 +6,12 @@
 <title>六年乙班快樂園地</title>
 <script type="text/javascript" src="./site.js"></script>
 <link rel="stylesheet" href="./css2"></head>
-<body class="class-page" bgcolor="#cceeff" background="./snwflks-99.gif" style="cursor: url(&quot;hol462.cur&quot;), auto;">
+<body class="class-page" bgcolor="#cceeff" background="./snwflks-99.gif" style="cursor: url(&quot;hol462.cur&quot;), auto;"><div id="classweb-gate"><center><div style="background:#ffffff;border:1px solid #cccccc;width:320px;margin:60px auto;padding:18px;text-align:left;">
+<h3 style="margin-top:0;">六年乙班班級網頁登入</h3>
+<p>請輸入帳號及密碼。</p>
+<form method="post" action="" onsubmit="return sqLogin(this);">帳號：<input type="text" name="username" size="14" autocomplete="username"><br><br>密碼：<input type="password" name="password" size="14" autocomplete="current-password"> <input type="submit" value="登入"></form>
+<p id="sqerr" style="display:none;color:#cc0000;">帳號或密碼錯誤。</p>
+</div></center></div><div id="classweb-real" style="display:none;">
 <script type="text/javascript">writeClassPageStart("歡迎來到六年乙班！", "home");</script><font size="1"><a href="/hces-quest-site/index.html">返回校網</a></font><center style="cursor: url(&quot;hol462.cur&quot;), auto;"><h1 id="class-title" style="visibility: hidden; cursor: url(&quot;hol462.cur&quot;), auto;"><font color="blue">六年乙班快樂園地</font></h1><font size="2">嘉平縣溪埕鎮溪埕國民小學　九十二學年度</font><marquee scrollamount="3"><font color="#006400">歡迎光臨六年乙班快樂園地！　祝大家聖誕快樂　記得完成作業及整理抽屜</font></marquee><hr><table width="760" border="0" cellpadding="8" cellspacing="0"><tbody><tr><td valign="top" style="cursor: url(&quot;hol462.cur&quot;), auto;"><h2 align="center"><font color="#ff6600">歡迎來到六年乙班！</font></h2>
 
 <p align="center" style="cursor: url(&quot;hol462.cur&quot;), auto;"><span class="photo" style="display: inline-block; line-height: 0; vertical-align: middle; overflow: hidden; cursor: url(&quot;hol462.cur&quot;), auto;"><img class="" data-img-src="images/class-photo-6b-2003.jpg" width="560" height="420" alt="六年乙班班級合照" style="border: 0px; background: transparent; padding: 0px; margin: 0px; display: block; transition: none; clip-path: inset(0px 0px 0%); cursor: url(&quot;hol462.cur&quot;), auto;" src="images/class-photo-6b-2003.jpg" data-first-enter-image="true"></span></p>
@@ -30,4 +35,21 @@
 <script type="text/javascript">writeClassPageEnd();</script></td></tr></tbody></table><hr><b>班級選單：</b>　<a href="/hces-quest-site/classweb/6b.html">回首頁</a>　<a href="/hces-quest-site/classweb/notice.html">班級公告</a>　<a href="/hces-quest-site/classweb/homework.html">本週功課</a>　<a href="/hces-quest-site/classweb/classmates.html">我們這一班</a>　<a href="/hces-quest-site/classweb/journals.html">生活札記</a>　<a href="/hces-quest-site/classweb/works.html">作品欣賞</a>　<a href="/hces-quest-site/classweb/guestbook.html">留言簿</a>　<p><font size="2">六乙的老師：麗君老師</font></p></center>
 
 
-</body></html>
+</div>
+<script type="text/javascript">
+function sqLogin(form) {
+  var u = (form.username ? form.username.value : "").trim();
+  var p = form.password ? form.password.value : "";
+  var err = document.getElementById("sqerr");
+  if (err) err.style.display = "none";
+  if ((u === "6b" || u === "6B") && p === "happyland92") {
+    var gate = document.getElementById("classweb-gate");
+    var real = document.getElementById("classweb-real");
+    if (gate) gate.style.display = "none";
+    if (real) real.style.display = "block";
+  } else {
+    if (err) err.style.display = "block";
+  }
+  return false;
+}
+</script></body></html>
