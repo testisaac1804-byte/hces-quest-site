@@ -1,10 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>一年乙班班級網頁登入</title></head><body bgcolor="#ffffff"><h3>一年乙班班級網頁登入</h3><p>請輸入帳號及密碼。</p><form id="sqform" method="get" action="" onsubmit="return sqLogin(event);">帳號：<input id="squser" type="text" name="username" size="14" autocomplete="username"><br><br>密碼：<input id="sqpw" type="password" name="password" size="14" autocomplete="current-password"> <input type="submit" value="登入"></form>
-<p id="sqerr" style="display:none;color:#cc0000;">帳號或密碼錯誤。</p><script>
-function sqLogin(e){
-  e.preventDefault();
-  var err = document.getElementById('sqerr');
-  err.style.display = 'block';
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>一年乙班班級網頁登入</title></head><body bgcolor="#ffffff"><h3>一年乙班班級網頁登入</h3><p>請輸入帳號及密碼。</p><form method="post" action="/classweb/1b.html" onsubmit="return sqLogin(this)">帳號：<input type="text" name="username" size="14" autocomplete="username"><br><br>密碼：<input type="password" name="password" size="14" autocomplete="current-password"> <input type="submit" value="登入"></form><p id="sqerr" style="display:none;color:#cc0000;">帳號或密碼錯誤。</p>
+<script type="text/javascript">
+function sqLogin(form) {
+  var u = (form.username ? form.username.value : "").trim();
+  var p = form.password ? form.password.value : "";
+  var err = document.getElementById("sqerr");
+  if (err) err.style.display = "none";
+  if ((u === "6b" || u === "6B") && p === "happyland92") {
+    window.location.href = "6b.html";
+  } else {
+    if (err) err.style.display = "block";
+  }
   return false;
 }
 </script>
-/body></html>
+</body></html>
